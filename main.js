@@ -1,3 +1,5 @@
+let winLose = document.querySelector('div')
+
 let getRob = () => {
     let rand = Math.floor(Math.random() * 3);
     let robot = ''
@@ -17,15 +19,20 @@ let game = () => {
 
     //determine winner
     if (human == 'rock' && rob == 'scissors') {
-        console.log('You won!');
+        winLose.textContent = 'You won!';
+        winLose.style.color = 'green';
     } else if (human == 'scissors' && rob == 'paper') {
-        console.log('Player 1 won!');
+        winLose.textContent = 'You won!';
+        winLose.style.color = 'green';
     }else if (human == 'paper' && rob == 'rock') {
-        console.log('You won!');
+        winLose.textContent = 'You won!';
+        winLose.style.color = 'green';
     } else if (human === rob) {
-        console.log('Its a tie!');
+        winLose.textContent = 'Its a tie!';
+        winLose.style.color = 'black';
     } else {
-        console.log('You lost...');
+        winLose.textContent = 'You lost...';
+        winLose.style.color = 'red';
     }
 }
 
